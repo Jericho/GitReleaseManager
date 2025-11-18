@@ -43,9 +43,9 @@ namespace GitReleaseManager.Core.Configuration
         public bool IncludeContributors { get; set; }
 
         [YamlMember(Alias = "sort-issues-by")]
-        public SortIssuesBy SortIssuesBy { get; set; } = SortIssuesBy.Id;
+        public SortIssuesBy SortIssuesBy { get; set; }
 
         [YamlMember(Alias = "sort-issues-direction")]
-        public SortDirection SortIssuesDirection { get; set; } = SortDirection.Ascending;
+        public SortDirection SortIssuesDirection { get; set; }
     }
 }
