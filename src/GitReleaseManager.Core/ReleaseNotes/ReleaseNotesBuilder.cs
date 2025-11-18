@@ -167,7 +167,7 @@ namespace GitReleaseManager.Core.ReleaseNotes
                 .OrderBy(o => o.Key) // Sort the labels alphabetically
                 .ToDictionary(o => GetValidLabel(o.Key, o.Count()), o =>
                 {
-                    // Sort the issues within each label group based on configuration
+                    // Sort the issues within each group based on configuration
                     return _configuration.Create.SortIssuesDirection switch
                     {
                         SortDirection.Ascending => o.OrderBy(i => keySelector(i)).ToList(),
